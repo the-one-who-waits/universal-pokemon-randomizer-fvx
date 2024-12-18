@@ -325,7 +325,7 @@ public class StarterRandomizer extends Randomizer {
             available = available.filterBasic(false);
         }
         if (triStageOnly) {
-            available.removeIf(p -> p.getStagesAfter(false) < 2);
+            available.removeIf(p -> p.getStagesAfter(false) < 1); // one or two evolutions
         }
         if(bstMin != 0 || bstMax != 1530) {
             available.removeIf(p -> p.getBSTForPowerLevels() < bstMin || p.getBSTForPowerLevels() > bstMax);
